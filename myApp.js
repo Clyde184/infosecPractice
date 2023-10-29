@@ -6,10 +6,13 @@ const helmet = require('helmet');
 
 app.use(helmet.hidePoweredBy({ setTo: 'PHP 4.2.0' }));
 
-
+/*
 app.use(helmet({
   frameguard: {action: 'DENY'},
 }));
+*/
+
+app.use(helmet.frameguard({action: 'DENY'}));
 
 
 
