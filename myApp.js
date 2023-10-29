@@ -15,7 +15,7 @@ app.use(helmet({
 app.use(helmet.frameguard({action: 'DENY'}));
 
 
-
+app.use(helmet.xssFilter());
 
 
 
